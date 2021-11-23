@@ -1,0 +1,47 @@
+{
+  "name": "deviscoding/caniparse",
+  "description": "Object-oriented PHP parser for raw CanIUse JSON data.",
+  "keywords": [
+    "parser",
+    "php",
+    "can i use",
+    "caniuse",
+    "browser",
+    "feature"
+  ],
+  "homepage": "https://github.com/jonesiscoding/caniparse",
+  "version": "1.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "AMJones",
+      "homepage": "https://www.deviscoding.com"
+    }
+  ],
+  "prefer-stable": true,
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "DevCoding\\Parser\\CanIUse": "src"
+    }
+  },
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "fyrd/caniuse",
+        "version": "dev-master",
+        "source": {
+          "url": "https://github.com/Fyrd/caniuse",
+          "type": "git",
+          "reference": "main"
+        }
+      }
+    }
+  ],
+  "require": {
+    "ext-json": "*",
+    "fyrd/caniuse": "dev-master",
+    "deviscoding/objection": "dev-master"
+  }
+}
