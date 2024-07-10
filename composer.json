@@ -22,7 +22,7 @@
   "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
-      "DevCoding\\Parser\\CanIUse": "src"
+      "DevCoding\\Parser\\CanIUse\\": "src"
     }
   },
   "repositories": [
@@ -42,6 +42,6 @@
   "require": {
     "ext-json": "*",
     "fyrd/caniuse": "dev-master",
-    "deviscoding/objection": "dev-master"
+    "deviscoding/code-objects": "^1.3"
   }
 }
