@@ -30,7 +30,7 @@
       "type": "package",
       "package": {
         "name": "fyrd/caniuse",
-        "version": "dev-master",
+        "version": "dev-main",
         "source": {
           "url": "https://github.com/Fyrd/caniuse",
           "type": "git",
@@ -41,7 +41,7 @@
   ],
   "require": {
     "ext-json": "*",
-    "fyrd/caniuse": "dev-master",
+    "fyrd/caniuse": "dev-main",
     "deviscoding/code-objects": "^1.3"
   }
 }
