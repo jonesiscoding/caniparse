@@ -65,11 +65,11 @@ class AgentStat
 
   public function isAlmost(): bool
   {
-    return $this->is(self::PARTIAL);
+    return $this->is(self::PARTIAL) && !$this->is(self::PREFIX);
   }
 
   public function isPrefix(): bool
   {
-    return $this->is(self::PREFIX);
+    return $this->is(self::PREFIX) && !$this->is(self::PARTIAL);
   }
 }
