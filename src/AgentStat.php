@@ -55,21 +55,21 @@ class AgentStat
 
   public function isSupported()
   {
-    return false !== stripos($this->value, 'y');
+    return $this->is(static::SUPPORTED);
   }
 
   public function isPolyfill()
   {
-    return false !== stripos($this->value, 'p');
+    return $this->is(self::POLYFILL);
   }
 
   public function isAlmost()
   {
-    return false === stripos($this->value, 'a');
+    return $this->is(self::PARTIAL);
   }
 
   public function isPrefix()
   {
-    return false === stripos($this->value, 'x');
+    return $this->is(self::PREFIX);
   }
 }
