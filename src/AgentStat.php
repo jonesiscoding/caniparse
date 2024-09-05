@@ -24,7 +24,7 @@ class AgentStat
    * @param string $version
    * @param string $value
    */
-  public function __construct($version, string $value)
+  public function __construct(string $version, string $value)
   {
     $this->version = new VersionImmutable($version);
     $this->value   = $value;
@@ -33,7 +33,7 @@ class AgentStat
   /**
    * @return VersionImmutable
    */
-  public function getVersion()
+  public function getVersion(): VersionImmutable
   {
     return $this->version;
   }
@@ -43,7 +43,7 @@ class AgentStat
    *
    * @return bool
    */
-  public function isLessThan($Version)
+  public function isLessThan($Version): bool
   {
     return !isset($Version) || !$Version instanceof BaseVersion || $this->getVersion()->lt($Version);
   }
@@ -53,22 +53,22 @@ class AgentStat
     return false !== stripos($this->value, $str);
   }
 
-  public function isSupported()
+  public function isSupported(): bool
   {
     return $this->is(static::SUPPORTED);
   }
 
-  public function isPolyfill()
+  public function isPolyfill(): bool
   {
     return $this->is(self::POLYFILL);
   }
 
-  public function isAlmost()
+  public function isAlmost(): bool
   {
     return $this->is(self::PARTIAL);
   }
 
-  public function isPrefix()
+  public function isPrefix(): bool
   {
     return $this->is(self::PREFIX);
   }
