@@ -40,6 +40,11 @@ class AgentStat
     return !isset($Version) || !$Version instanceof BaseVersion || $this->getVersion()->lt($Version);
   }
 
+  public function is(string $str): bool
+  {
+    return false !== stripos($this->value, $str);
+  }
+
   public function isSupported()
   {
     return false !== stripos($this->value, 'y');
