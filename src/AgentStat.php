@@ -7,6 +7,14 @@ use DevCoding\CodeObject\Object\VersionImmutable;
 
 class AgentStat
 {
+  const DISABLED    = 'd';
+  const PARTIAL     = 'a';
+  const POLYFILL    = 'p';
+  const PREFIX      = 'x';
+  const SUPPORTED   = 'y';
+  const UNKNOWN     = 'u';
+  const UNSUPPORTED = 'n';
+
   /** @var string */
   protected $value;
   /** @var VersionImmutable */
